@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'lab5/screens/home_screen.dart';
-import 'lab4/lab4_main.dart'; 
-import 'lab6/responsive_movie_screen.dart'; // Import Lab 6
+import 'Lab4/lab4_main.dart';
+import 'lab6/responsive_movie_screen.dart';
+import 'lab7/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,16 +19,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      // =========== MENU CHẠY LAB ===========
-      // 👉 Chạy Lab 4:
+      
+      // Lab 4:
       // home: const Lab4MainScreen(), 
       
-      // 👉 Chạy Lab 5:
+      // Lab 5:
       // home: const HomeScreen(),
 
-      // 👉 Để chạy Lab 6, hãy bỏ comment (xoá dấu //) ở dòng dưới:
-      home: const ResponsiveMovieApp(),
-      // ================================================
+      //  Lab 6:
+      // home: const ResponsiveMovieApp(),
+      
+      //  Lab 7:
+      home: const SignupApp(),
+      // =====================================
     );
   }
 }
