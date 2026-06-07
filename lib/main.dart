@@ -4,6 +4,8 @@ import 'Lab4/lab4_main.dart';
 import 'ReadingAppSample/ebook_app.dart';
 import 'lab6/responsive_movie_screen.dart';
 import 'lab7/signup_screen.dart';
+import 'OnboardingExample/onboarding_app.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Labs',
-      debugShowCheckedModeBanner: false, // Ẩn chữ DEBUG ở góc phải
+      debugShowCheckedModeBanner: false, 
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -33,9 +35,12 @@ class MyApp extends StatelessWidget {
       //  Lab 7:
       // home: const SignupApp(),
 
-      // Lab 8: Ebook Reader
-      home: const EbookApp(),
-      // =====================================
+      // Ebook Reader
+      // home: const EbookApp(),
+
+      // Onboarding Example
+      home: const OnboardingApp(),
+   
     );
   }
 }
