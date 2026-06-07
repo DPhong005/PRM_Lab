@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'lab5/screens/home_screen.dart';
 import 'Lab4/lab4_main.dart';
+import 'ReadingAppSample/ebook_app.dart';
 import 'lab6/responsive_movie_screen.dart';
 import 'lab7/signup_screen.dart';
 
@@ -30,7 +31,10 @@ class MyApp extends StatelessWidget {
       // home: const ResponsiveMovieApp(),
       
       //  Lab 7:
-      home: const SignupApp(),
+      // home: const SignupApp(),
+
+      // Lab 8: Ebook Reader
+      home: const EbookApp(),
       // =====================================
     );
   }
