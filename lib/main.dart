@@ -14,6 +14,8 @@ import 'lab10/lab10_3/auto_splash_screen.dart';
 import 'lab10/lab10_4/google_login_screen.dart';
 import 'lab10/services/notification_service.dart';
 import 'lab10/unified/unified_splash_screen.dart';
+import 'lab11/screens/task_list_screen.dart';
+import 'lab11/repositories/task_repository.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -66,7 +68,10 @@ class MyApp extends StatelessWidget {
       // home: const Lab9Screen(),
 
       // Lab 10
-      home: const UnifiedSplashScreen(),
+      // home: const UnifiedSplashScreen(),
+      
+      // Lab 11
+      home: TaskListScreen(repository: TaskRepository()),
     
     );
   }
