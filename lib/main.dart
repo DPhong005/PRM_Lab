@@ -5,7 +5,7 @@ import 'ReadingAppSample/ebook_app.dart';
 import 'lab6/responsive_movie_screen.dart';
 import 'lab7/signup_screen.dart';
 import 'OnboardingExample/onboarding_app.dart';
-
+import 'lab8/lab8_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +39,11 @@ class MyApp extends StatelessWidget {
       // home: const EbookApp(),
 
       // Onboarding Example
-      home: const OnboardingApp(),
+      // home: const OnboardingApp(),
+ 
+      // Lab 8:
+      home: const Lab8Screen(),
+
    
     );
   }
