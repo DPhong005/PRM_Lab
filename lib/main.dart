@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 import 'lab5/screens/home_screen.dart';
 import 'Lab4/lab4_main.dart';
 import 'ReadingAppSample/ebook_app.dart';
@@ -14,8 +15,12 @@ import 'lab10/lab10_3/auto_splash_screen.dart';
 import 'lab10/lab10_4/google_login_screen.dart';
 import 'lab10/services/notification_service.dart';
 import 'lab10/unified/unified_splash_screen.dart';
-import 'lab11/screens/task_list_screen.dart';
-import 'lab11/repositories/task_repository.dart';
+// import 'lab11/screens/task_list_screen.dart';
+// import 'lab11/repositories/task_repository.dart';
+
+// Lab 12 imports
+import 'lab12/providers/task_provider.dart';
+import 'lab12/screens/task_list_screen.dart' as lab12;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +30,14 @@ void main() async {
   } catch (e) {
     debugPrint("Firebase/Notification init error: $e");
   }
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => TaskProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -71,8 +83,10 @@ class MyApp extends StatelessWidget {
       // home: const UnifiedSplashScreen(),
       
       // Lab 11
-      home: TaskListScreen(repository: TaskRepository()),
-    
+      // home: TaskListScreen(repository: TaskRepository()),
+      
+      // Lab 12
+      home: const lab12.TaskListScreen(),
     );
   }
 }
