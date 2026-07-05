@@ -6,6 +6,7 @@ import 'lab6/responsive_movie_screen.dart';
 import 'lab7/signup_screen.dart';
 import 'OnboardingExample/onboarding_app.dart';
 import 'lab8/lab8_screen.dart';
+import 'lab8b/screens/weather_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,10 @@ class MyApp extends StatelessWidget {
       // home: const OnboardingApp(),
  
       // Lab 8:
-      home: const Lab8Screen(),
+      // home: const Lab8Screen(),
+
+      // Lab 8B (Weather Companion):
+      home: const WeatherScreen(),
 
    
     );
