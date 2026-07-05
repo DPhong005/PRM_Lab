@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "428562935065",
+    "project_id": "prm-lab10-a4f35",
+    "storage_bucket": "prm-lab10-a4f35.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428562935065:android:d82e3065a5e16082032988",
+        "android_client_info": {
+          "package_name": "com.example.prm_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428562935065-5bet8prktqbvqkvfejqlt3p5tj4qrn76.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prm_lab",
+            "certificate_hash": "1aca0c21156e3d6bb359e13587349a9e6e747e77"
+          }
+        },
+        {
+          "client_id": "428562935065-jbd2pbti1jicupcommtijgaaqtqt67rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfBVUgsBUaItkmqMlVSVqZsBgMzjVbJQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428562935065-jbd2pbti1jicupcommtijgaaqtqt67rh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

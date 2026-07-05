@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'lab5/screens/home_screen.dart';
 import 'Lab4/lab4_main.dart';
 import 'ReadingAppSample/ebook_app.dart';
@@ -7,9 +8,21 @@ import 'lab7/signup_screen.dart';
 import 'OnboardingExample/onboarding_app.dart';
 import 'lab8/lab8_screen.dart';
 import 'lab8b/screens/weather_screen.dart';
-import 'lab9/screens/lab9_screen.dart';
+import 'lab10/lab10_1/mock_login_screen.dart';
+import 'lab10/lab10_2/real_login_screen.dart';
+import 'lab10/lab10_3/auto_splash_screen.dart';
+import 'lab10/lab10_4/google_login_screen.dart';
+import 'lab10/services/notification_service.dart';
+import 'lab10/unified/unified_splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp();
+    await NotificationService.initialize();
+  } catch (e) {
+    debugPrint("Firebase/Notification init error: $e");
+  }
   runApp(const MyApp());
 }
 
@@ -50,9 +63,11 @@ class MyApp extends StatelessWidget {
       // home: const WeatherScreen(),
 
       // Lab 9:
-      home: const Lab9Screen(),
+      // home: const Lab9Screen(),
 
-   
+      // Lab 10
+      home: const UnifiedSplashScreen(),
+    
     );
   }
 }
